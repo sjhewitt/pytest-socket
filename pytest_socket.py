@@ -78,6 +78,7 @@ def enable_socket():
     """ re-enable socket.socket to enable the Internet. useful in testing.
     """
     socket.socket = _true_socket
+    socket.socket.connect = _true_connect
 
 
 def pytest_configure(config):
